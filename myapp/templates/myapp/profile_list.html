@@ -1,0 +1,25 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Lista de perfiles{% endblock %}
+
+{% block content %}
+<h1>Perfiles</h1>
+
+<table border="1">
+
+    <tr>
+        <th>Nombre</th><th>Apellido</th><th>Edad</th><th>Activo</th><th>Acciones</th>
+    </tr>
+
+    {% for data in profiles %}
+    <tr>
+        <td>{{ data.name }}</td>
+        <td>{{ data.last_name }}</td>
+        <td>{{ data.age }}</td>
+        <td>{{ data.status }}</td>
+    </tr>
+    {% empty %}
+    {% endfor %}
+    <tr><td>No hay registros</td></tr>
+</table>
+{% endblock %}
