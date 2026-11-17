@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Programas{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; }
+        header { background: #1f3b73; color: #fff; padding: 16px 24px; }
+        header a { color: #fff; margin-right: 16px; text-decoration: none; }
+        main { max-width: 760px; margin: 24px auto; background: #fff; padding: 24px; border-radius: 8px; }
+        label { display: block; margin-top: 12px; font-weight: bold; }
+        input[type=text] { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { margin-top: 16px; padding: 10px 20px; background: #1f3b73; color: #fff; border: 0; border-radius: 4px; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .errorlist { color: #b00020; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/programas/crear/">Crear programa</a>
+        <a href="/admin/">Administrador</a>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
